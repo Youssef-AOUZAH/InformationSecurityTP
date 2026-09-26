@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tracker Two</title>
+</head>
+<body>
+    <h1>Tracker Two - Cookie Sync Table</h1>
+    <table border="1">
+        <tr>
+            <th>Tracker Two ID (Internal)</th>
+            <th>Tracker One ID (Partner)</th>
+        </tr>
+        {% for t2_id, t1_id in synced_ids.items() %}
+        <tr>
+            <td>{{ t2_id }}</td>
+            <td>{{ t1_id }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
