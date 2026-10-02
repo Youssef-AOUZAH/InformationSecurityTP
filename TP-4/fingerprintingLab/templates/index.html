@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fingerprinting Lab</title>
+</head>
+<body>
+    <h2>Part 3: Behavioral Fingerprinting</h2>
+    <p>Please type the following text exactly:</p>
+    <blockquote id="target-sentence">Cookies are gone, but Alice's rhythm still leaves traces!</blockquote>
+
+    <input type="text" id="typing-input" size="65" placeholder="Start typing the sentence above..." autocomplete="off">
+    <button id="restart-btn" type="button">Restart</button>
+
+    <div id="results" style="margin-top: 15px;">
+        <p>Total typing time: <span id="time-val">-</span></p>
+        <p>Typing Speed: <span id="wpm-val">-</span></p>
+        <p>Corrections (Backspace): <span id="corrections-val">0</span></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='fingerprint.js') }}"></script>
+</body>
+</html>
